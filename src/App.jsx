@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-function App() {
+const App = () => {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
 
@@ -16,7 +16,6 @@ function App() {
       setLocation('')
     }
   }
-
   return (
     <div className="app">
       <div className="search">
@@ -39,7 +38,6 @@ function App() {
             {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
-
         {data.name !== undefined &&
           <div className="bottom">
             <div className="feels">
@@ -60,5 +58,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
